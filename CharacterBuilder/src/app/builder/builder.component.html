@@ -1,5 +1,3 @@
-<h3>Character Builder</h3>
-
 <form (submit)="submit()" class="character-builder-form">
   <div class="form-group">
     <label for="eye">Eye:</label>
@@ -41,6 +39,7 @@
   </div>
 
   <button type="submit">Submit</button>
+  <button (click)="feelingLucky()">Feeling Lucky</button>
 </form>
 
 <img [src]="characterIMG()" alt="Character" *ngIf="characterIMG()" class="character-image" />

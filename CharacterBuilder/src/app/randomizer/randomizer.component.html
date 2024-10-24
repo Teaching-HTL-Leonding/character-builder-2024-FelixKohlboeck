@@ -1,0 +1,8 @@
+<div class="container">
+  <h3>Randomized Character</h3>
+  <button (click)="zoomIn()" class="next-button">+</button>
+  <button (click)="zoomOut()" class="next-button">-</button>
+  <button (click)="loadRandomImage()" class="next-button">Next</button>
+
+  <img [src]="characterIMG()" id="characterIMG" alt="Character" *ngIf="characterIMG()" class="character-image" />
+</div>
