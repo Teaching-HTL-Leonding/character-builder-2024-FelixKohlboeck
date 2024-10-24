@@ -1,0 +1,46 @@
+<h3>Character Builder</h3>
+
+<form (submit)="submit()" class="character-builder-form">
+  <div class="form-group">
+    <label for="eye">Eye:</label>
+    <select id="eye" name="eyeColor" [(ngModel)]="eye">
+      <option value="NoEye">No Eyes</option>
+      <option value="HalfOpen">Half Open</option>
+      <option value="Closed">Closed</option>
+      <option value="Open">Open</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <input type="checkbox" [(ngModel)]="hasHammer" name="hammer" id="hammer">
+    <label for="hammer">Has Hammer</label>
+  </div>
+
+  <div class="form-group">
+    <label for="mouth">Mouth:</label>
+    <select id="mouth" name="Mouth" [(ngModel)]="mouth">
+      <option value="NoMouth">No Mouth</option>
+      <option value="Happy">Happy</option>
+      <option value="Normal">Normal</option>
+      <option value="Unhappy">Unhappy</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="rightHand">Right Hand:</label>
+    <select id="rightHand" name="rightHand" [(ngModel)]="rightHand">
+      <option value="NoHand">No Hand</option>
+      <option value="Normal">Normal</option>
+      <option value="Victory">Victory</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <input type="checkbox" [(ngModel)]="hasTail" name="tail" id="tail">
+    <label for="tail">Has Tail</label>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<img [src]="characterIMG()" alt="Character" *ngIf="characterIMG()" class="character-image" />
